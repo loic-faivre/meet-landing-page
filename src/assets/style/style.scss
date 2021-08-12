@@ -201,7 +201,7 @@ h3 {
         margin-left: auto;
         margin-right: auto;
         height: 428px;
-        max-width: 375px;
+        max-width: 100%;
         background: #4D96A9;
         position: relative;
         .bg-img {
@@ -235,6 +235,20 @@ h3 {
                 color: #FAFAFA;
                 margin-bottom: 40px;
             }
+        }
+        .sign {
+          position: absolute;
+          display: block;
+          bottom: 1px;
+          left: 10px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 26px;
+          color: #e0e0e0;
+          a {
+            color: white;
+            font-weight: 900;
+          }
         }
     }
   }
@@ -336,7 +350,7 @@ h3 {
             margin-left: auto;
             margin-right: auto;
             height: 428px;
-            max-width: 768px;
+            max-width: 100%;
             background: #4D96A9;
             position: relative;
             .bg-img {
@@ -373,6 +387,168 @@ h3 {
       }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
+  body {
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .logo {
+        margin-top: 48px;
+        margin-bottom: 54px;
+        height: 28px;
+        width: 119px;
+      }
+      .tablet-hero {
+        overflow-x: hidden;
+        height: 303px;
+        max-width: 768px;
+        object-fit: contain;
+        display: none;
+      }
+      .hero {
+        display: flex;
+        width: 1440px;
+        .hero-desktop {
+          display: block;
+        }
+        .hero-left {
+          order: 1;
+          margin-right: 88px;
+          height: 303px;
+          max-width: 394px;
+          align-self: flex-start;
+        }
+        .hero-right {
+          order: 3;
+          margin-left: 88px;
+          height: 303px;
+          max-width: 394px;
+          align-self: flex-end;
+        }
+        .hero-content {
+          order: 2;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          max-width: 540px;
+          h1 {
+            max-width: 445px;
+            font-size: 64px;
+            line-height: 64px;
+            margin-top: 47PX;
+            text-align: center;
+          }
+          p {
+            text-align: center;
+            max-width: 540px;
+            margin-top: 34px;
+            margin-bottom: 32px;
+            font-size: 18px;
+            line-height: 26px;
+          }
+          .hero-buttons {
+              display: flex;
+              flex-direction: row;
+              margin-bottom: unset;
+          }
+        }
+      }
+     
+    }
   
+    .dot {
+      &.two {
+          top: -192px;
+      }
+      div {
+        margin-top: 164px;
+        margin-bottom: 67px;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 84px;
+          background: rgba(135, 135, 157, 0.25);
+          top: -84px;
+        }
+      }
+    }
+  
+    .photo-grid {
+      max-width: 1110px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: space-between;
+      img {
+        height: 242px;
+        width: 255px;
+        border-radius: 8px;
+      }
+    }
+  
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            text-align: center;
+            max-width: 445px;
+            margin-bottom: 32px;
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        p {
+            max-width: 540px;
+            text-align: center;
+            margin-bottom: 184px;
+        }
+    }
+  
+    .footer {
+        margin-left: auto;
+        margin-right: auto;
+        height: 308px;
+        max-width: 1440px;
+        background: #4D96A9;
+        position: relative;
+        .bg-img {
+            height: 100%;
+            width: 100%;
+            background: url(../desktop/image-footer.jpg);
+            opacity: 0.1;
+            mix-blend-mode: normal;
+            position: absolute;
+        }
+        .footer-content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            padding-left:  168px;
+            padding-right: 168px;
+            justify-content: unset;
+            flex-direction: row;
+            position: absolute;
+            h2 {
+                max-width: 350px;
+                text-align: left;
+                color: #FAFAFA;
+                margin-bottom: unset;
+                margin-right: 125px;
+            }
+            p {
+                max-width: 350px;
+                font-size: 18px;
+                text-align: left;
+                color: #FAFAFA;
+                margin-bottom: unset;
+                margin-right: 92px;
+            }
+        }
+    }
+  }
 }
